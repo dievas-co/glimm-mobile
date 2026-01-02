@@ -82,10 +82,20 @@ class _TimelineView extends StatelessWidget {
         backgroundColor: Colors.white,
         child: const Icon(Icons.add, color: Colors.black),
         onPressed: () {
-          Navigator.of(context).push(EntryEditorPage.route()).then((_) {
-            // Refresh list when returning from editor
-            context.read<DiaryBloc>().add(const DiaryEvent.loadEntries());
-          });
+          final diaryBloc = context.read<DiaryBloc>();
+          Navigator.of(context)
+              .push(
+                MaterialPageRoute(
+                  builder: (_) => BlocProvider.value(
+                    value: diaryBloc,
+                    child: const EntryEditorPage(),
+                  ),
+                ),
+              )
+              .then((_) {
+                // Refresh list when returning from editor
+                diaryBloc.add(const DiaryEvent.loadEntries());
+              });
         },
       ),
     );

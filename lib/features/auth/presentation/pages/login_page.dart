@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:glimm/core/theme/glimm_theme.dart';
 import 'package:glimm/features/auth/presentation/bloc/auth_bloc.dart';
 
+import 'package:glimm/features/diary/presentation/pages/timeline_page.dart';
+
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
@@ -21,7 +23,9 @@ class LoginPage extends StatelessWidget {
               );
             },
             authenticated: (user) {
-              // Navigate to Timeline (TODO)
+              Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (context) => const TimelinePage()),
+              );
             },
             orElse: () {},
           );
