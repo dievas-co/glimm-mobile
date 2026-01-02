@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:glimm/core/di/injection.dart';
 import 'package:glimm/features/diary/presentation/bloc/diary_bloc.dart';
+import 'package:glimm/features/diary/presentation/pages/entry_editor_page.dart';
 import 'package:glimm/features/diary/domain/entities/diary_entry.dart';
 import 'package:intl/intl.dart';
 
@@ -81,13 +82,10 @@ class _TimelineView extends StatelessWidget {
         backgroundColor: Colors.white,
         child: const Icon(Icons.add, color: Colors.black),
         onPressed: () {
-          // TODO: Navigate to EntryEditorPage
-          // For MVP testing, adding a dummy entry
-          context.read<DiaryBloc>().add(
-            DiaryEvent.createEntry(
-              "Moment at ${DateFormat('HH:mm').format(DateTime.now())}",
-            ),
-          );
+          Navigator.of(context).push(EntryEditorPage.route()).then((_) {
+            // Refresh list when returning from editor
+            context.read<DiaryBloc>().add(const DiaryEvent.loadEntries());
+          });
         },
       ),
     );
