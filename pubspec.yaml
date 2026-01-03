@@ -1,5 +1,5 @@
 name: glimm
-description: "A new Flutter project."
+description: "Minimalist thread-style diary app - Digital Zen"
 publish_to: 'none'
 version: 0.1.0
 
@@ -10,10 +10,48 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # State Management
+  flutter_bloc: ^8.1.6
+  freezed_annotation: ^2.4.4
+
+  # Local DB
+  isar: ^3.1.0+1
+  isar_flutter_libs: ^3.1.0+1
+
+  # Auth
+  firebase_core: ^3.8.1
+  firebase_auth: ^5.7.0
+  google_sign_in: ^6.2.2
+
+  # Cloud
+  firebase_messaging: ^15.1.5
+  firebase_storage: ^12.3.7
+
+  # Encryption
+  cryptography: ^2.7.0
+
+  # Utils
+  uuid: ^4.5.1
+  flutter_secure_storage: ^9.2.4
+  get_it: ^8.0.3
+  injectable: ^2.3.2
+  connectivity_plus: ^6.1.1
+  flutter_local_notifications: ^18.0.1
+  http: ^1.2.2
+  path_provider: ^2.1.5
+  shared_preferences: ^2.2.2
+  intl: ^0.19.0
+  equatable: ^2.0.7
+  dartz: ^0.10.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
+  build_runner: ^2.3.3
+  freezed: ^2.4.6
+  isar_generator: ^3.1.0+1
+  injectable_generator: ^2.4.1
 
 flutter:
   uses-material-design: true

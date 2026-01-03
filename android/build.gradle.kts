@@ -19,6 +19,21 @@ subprojects {
     project.evaluationDependsOn(":app")
 }
 
+// Fix for isar_flutter_libs namespace issue with AGP 8.0+
+// The library is old and doesn't declare namespace in its build.gradle
+subprojects {
+    afterEvaluate {
+        if (project.hasProperty("android")) {
+            val android = project.extensions.findByName("android")
+            if (android is com.android.build.gradle.LibraryExtension) {
+                if (android.namespace == null || android.namespace!!.isEmpty()) {
+                    android.namespace = project.group.toString()
+                }
+            }
+        }
+    }
+}
+
 tasks.register<Delete>("clean") {
     delete(rootProject.layout.buildDirectory)
 }

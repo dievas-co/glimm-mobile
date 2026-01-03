@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "1008082502156",
+    "project_id": "glimm-7c690",
+    "storage_bucket": "glimm-7c690.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1008082502156:android:1459e0feb1fb6df5d22429",
+        "android_client_info": {
+          "package_name": "ai.dievas.glimm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1008082502156-ubo5km6s8cnhgf9put53gnn9tkcqtf6r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRmdTsBbpUUtmoGJH0ubR1t7Enbs0MYGY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1008082502156-ubo5km6s8cnhgf9put53gnn9tkcqtf6r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1008082502156-0s6c0fcl7v3fuf339b7icn234lvdtvqn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.glimm"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1008082502156:android:d752316e5f2b9be1d22429",
+        "android_client_info": {
+          "package_name": "com.example.glimm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1008082502156-ubo5km6s8cnhgf9put53gnn9tkcqtf6r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRmdTsBbpUUtmoGJH0ubR1t7Enbs0MYGY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1008082502156-ubo5km6s8cnhgf9put53gnn9tkcqtf6r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1008082502156-0s6c0fcl7v3fuf339b7icn234lvdtvqn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.glimm"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
